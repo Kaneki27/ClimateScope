@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    /* Climatic Theme - Light Mode */
+    --background: 210 60% 97%; /* Very light cool blue-gray */
+    --foreground: 207 30% 25%; /* Dark cool desaturated blue */
+
+    --card: 0 0% 100%; /* White cards for contrast */
+    --card-foreground: 207 30% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 207 30% 25%;
+
+    --primary: 207 100% 25%; /* Deep Blue - Based on #003049, slightly lighter */
+    --primary-foreground: 0 0% 100%; /* White */
+
+    --secondary: 145 45% 35%; /* Earthy Green - Based on #386641 */
+    --secondary-foreground: 0 0% 100%; /* White */
+
+    --muted: 210 40% 90%; /* Lighter gray for muted elements */
+    --muted-foreground: 210 30% 50%; /* Softer text for muted */
+
+    --accent: 0 70% 52%; /* Warning Orange - Based on #D62828 */
+    --accent-foreground: 0 0% 100%; /* White */
+
+    --destructive: 0 70% 52%; /* Warning Orange for destructive actions */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 207 30% 80%;
+    --input: 207 30% 88%;
+    --ring: 207 100% 35%; /* Brighter blue for focus rings */
+    --radius: 0.5rem;
+
+    --chart-1: 207 100% 30%; /* Deep Blue variant for charts */
+    --chart-2: 145 45% 40%; /* Earthy Green variant for charts */
+    --chart-3: 0 70% 58%;   /* Warning Orange variant for charts */
+    --chart-4: 45 80% 55%;   /* Contrasting Gold/Yellow */
+    --chart-5: 260 70% 60%;  /* Contrasting Violet */
+
+    /* Sidebar specific colors - Light Mode */
+    --sidebar-background: 207 100% 14.3%; /* #003049 User's Deep Blue */
+    --sidebar-foreground: 207 20% 90%; /* Light text for sidebar */
+    --sidebar-primary: 145 45% 45%; /* Earthy Green for active/primary items */
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 207 80% 25%; /* Lighter blue for hover */
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 207 80% 20%;
+    --sidebar-ring: 145 45% 55%; /* Ring for sidebar items */
+  }
+
+  .dark {
+    /* Climatic Theme - Dark Mode */
+    --background: 207 90% 8%; /* Very dark deep blue */
+    --foreground: 207 20% 88%; /* Light, cool gray-blue */
+
+    --card: 207 80% 12%; /* Slightly lighter dark blue for cards */
+    --card-foreground: 207 20% 88%;
+
+    --popover: 207 80% 12%;
+    --popover-foreground: 207 20% 88%;
+
+    --primary: 207 80% 60%; /* Lighter, vibrant deep blue */
+    --primary-foreground: 207 100% 10%; /* Very dark blue for text on primary */
+
+    --secondary: 145 40% 55%; /* Lighter earthy green */
+    --secondary-foreground: 145 100% 10%; /* Dark green for text */
+
+    --muted: 207 60% 18%;
+    --muted-foreground: 207 20% 65%;
+
+    --accent: 0 75% 65%; /* Lighter warning orange */
+    --accent-foreground: 0 100% 10%; /* Dark for text */
+
+    --destructive: 0 75% 65%;
+    --destructive-foreground: 0 100% 10%;
+
+    --border: 207 50% 25%;
+    --input: 207 50% 22%;
+    --ring: 207 80% 70%; /* Brighter blue ring for dark mode */
+
+    --chart-1: 207 80% 65%;
+    --chart-2: 145 40% 60%;
+    --chart-3: 0 75% 70%;
+    --chart-4: 45 80% 65%;
+    --chart-5: 260 70% 70%;
+
+    /* Sidebar specific colors - Dark Mode */
+    --sidebar-background: 207 85% 10%; /* Distinct dark blue for sidebar */
+    --sidebar-foreground: 207 20% 85%;
+    --sidebar-primary: 145 40% 60%; /* Brighter Earthy Green */
+    --sidebar-primary-foreground: 145 100% 10%;
+    --sidebar-accent: 207 70% 20%; /* Subtle hover */
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 207 60% 22%;
+    --sidebar-ring: 145 40% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
